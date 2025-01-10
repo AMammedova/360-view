@@ -1,6 +1,6 @@
-import View from "@/components";
-import PanoramaContainer from "@/containers/PanoramaContainer";
+import dynamic from "next/dynamic";
 
+const PanoramaContainer = dynamic(() => import("@/containers/PanoramaContainer"), { ssr: false });
 export default function Home() {
   return <PanoramaContainer/>;
 }
